@@ -7,12 +7,12 @@ A complete end-to-end NLP pipeline for binary sentiment classification on the [I
 ## 📁 Project Structure
 
 ```
-├── PreprocessingIMDB.ipynb               # Text cleaning, tokenization, stemming, stop word removal
-├── FeatureEngineeringIMDB.ipynb          # BoW, N-grams, TF-IDF, linguistic features
-├── Word_Cloud_IMDB.ipynb                 # Word cloud visualization of processed reviews
-├── VisualizingTopFeaturesIMDB.ipynb      # Top sentiment-driving words & feature comparison charts
-├── ML_Techmiques_Comparison_IMDB.ipynb   # Training & comparing 5 ML classifiers
-├── Optimized_ML_Pipeline_nd_Tuning.ipynb # Hyperparameter tuning & final optimized pipeline
+├── Preprocessing.ipynb               # Text cleaning, tokenization, stemming, stop word removal
+├── Feature Engineering.ipynb          # BoW, N-grams, TF-IDF, linguistic features
+├── Word Cloud.ipynb                 # Word cloud visualization of processed reviews
+├── Visualizing Top Features.ipynb      # Top sentiment-driving words & feature comparison charts
+├── ML Techniques Comparison.ipynb   # Training & comparing 5 ML classifiers
+├── Optimized ML Pipeline and Tuning.ipynb # Hyperparameter tuning & final optimized pipeline
 ```
 
 ---
@@ -28,7 +28,7 @@ A complete end-to-end NLP pipeline for binary sentiment classification on the [I
 
 ## 🔧 Pipeline Overview
 
-### 1. Preprocessing (`PreprocessingIMDB.ipynb`)
+### 1. Preprocessing
 Raw reviews go through a multi-step cleaning pipeline:
 - HTML tag removal using `BeautifulSoup`
 - Lowercasing and special character removal via regex
@@ -38,7 +38,7 @@ Raw reviews go through a multi-step cleaning pipeline:
 
 Output saved as `Preprocessed IMDB Dataset.csv`.
 
-### 2. Feature Engineering (`FeatureEngineeringIMDB.ipynb`)
+### 2. Feature Engineering
 Multiple text representation strategies are applied:
 - **Bag of Words (BoW)** — unigram term frequency
 - **N-grams** — bigram and trigram representations
@@ -47,14 +47,14 @@ Multiple text representation strategies are applied:
 
 Output saved as `Feature Engineered IMDB Dataset.csv`.
 
-### 3. Word Cloud (`Word_Cloud_IMDB.ipynb`)
+### 3. Word Cloud
 Generates a word cloud from the preprocessed and filtered reviews to visualise the most frequent terms in the corpus.
 
-### 4. Visualizing Top Features (`VisualizingTopFeaturesIMDB.ipynb`)
+### 4. Visualizing Top Features
 - Bar chart of the **top 10 positive and top 10 negative words** driving sentiment, based on Logistic Regression coefficients
 - **Feature representation comparison** — accuracy and F1-score of BoW, Bigrams, Trigrams, and TF-IDF across a Logistic Regression baseline
 
-### 5. ML Techniques Comparison (`ML_Techmiques_Comparison_IMDB.ipynb`)
+### 5. ML Techniques Comparison
 Five classifiers are trained on a **combined feature matrix** (TF-IDF + scaled linguistic features) with a 70/15/15 train-validation-test split:
 
 | Model | Notes |
@@ -67,7 +67,7 @@ Five classifiers are trained on a **combined feature matrix** (TF-IDF + scaled l
 
 Models are evaluated on Accuracy, Precision, Recall, and F1-Score on the validation set, with confusion matrices printed for each.
 
-### 6. Optimized ML Pipeline & Tuning (`Optimized_ML_Pipeline_nd_Tuning.ipynb`)
+### 6. Optimized ML Pipeline & Tuning 
 Hyperparameter tuning and final pipeline optimization on the best-performing models from the comparison stage.
 
 ---
@@ -114,12 +114,12 @@ nltk.download('stopwords')
 
 Run the notebooks in order:
 
-1. `PreprocessingIMDB.ipynb`
-2. `FeatureEngineeringIMDB.ipynb`
-3. `Word_Cloud_IMDB.ipynb` *(optional, visualization)*
-4. `VisualizingTopFeaturesIMDB.ipynb` *(optional, visualization)*
-5. `ML_Techmiques_Comparison_IMDB.ipynb`
-6. `Optimized_ML_Pipeline_nd_Tuning.ipynb`
+1. `Preprocessing.ipynb`
+2. `Feature Engineering.ipynb`
+3. `Word Cloud.ipynb` *(optional, visualization)*
+4. `Visualizing Top Features.ipynb` *(optional, visualization)*
+5. `ML Techniques Comparison.ipynb`
+6. `Optimized ML Pipeline and Tuning.ipynb`
 
 > Make sure the dataset CSV is in the same directory as the notebooks, or update the file paths accordingly.
 
