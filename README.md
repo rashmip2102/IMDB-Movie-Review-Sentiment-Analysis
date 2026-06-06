@@ -159,7 +159,7 @@ python -m spacy download en_core_web_sm
 ## 🚀 Getting Started
 
 ```bash
-git clone <repo-url>
+git clone https://github.com/rashmip2102/IMDB-Sentiment-Analysis-End-to-End-NLP-Pipeline.git
 cd imdb-sentiment-analysis
 jupyter notebook
 ```
