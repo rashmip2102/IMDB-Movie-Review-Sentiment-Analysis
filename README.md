@@ -75,7 +75,7 @@ Hyperparameter tuning and final pipeline optimization on the best-performing mod
 ## ⚙️ Installation
 
 ```bash
-git clone [https://github.com/your-username/imdb-sentiment-analysis.git]
+git clone https://github.com/your-username/imdb-sentiment-analysis.git
 cd imdb-sentiment-analysis
 pip install -r requirements.txt
 ```
